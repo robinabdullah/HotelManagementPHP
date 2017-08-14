@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script type="text/javascript">	
+			
+			var serial =1;
+			function next(){
+				serial++;
+				if(serial >= 5)
+					serial = 1;
+				document.getElementById("images").src="download ("+ serial +").jpg";
+				//document.getElementById("label").innerHTML = "download ("+ serial +")";
+			}
+			function previous(){
+				serial--;
+				if(serial <= 1)
+					serial = 5;
+				document.getElementById("images").src="download ("+ serial +").jpg";
+				document.getElementById("label").innerHTML = "download ("+ serial +")";
+			}
+			
+			window.setInterval(next, 3000);
+		</script>
+	</head>
+	<body>
+
+	<table align="center" cellpadding="10" cellspacing="0">
+		<tr>
+		<td><img id="images" src="download (1).jpg" width="1000" height="500"></td>
+		</tr>
+		
+		
+		</table>
+
+
+	</body>
+</html>

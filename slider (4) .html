@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script type="text/javascript">	
+			
+			var serial =1;
+			function next(){
+				serial++;
+				if(serial >= 5)
+				serial = 1;
+				document.getElementById("images").src="food ("+ serial +").jpg";
+				document.getElementById("label").innerHTML = "food ("+ serial +")";
+			}
+			function previous(){
+				serial--;
+				if(serial <= 1)
+					serial = 5;
+				document.getElementById("images").src="food ("+ serial +").jpg";
+				document.getElementById("label").innerHTML = "food ("+ serial +")";
+			}
+			
+			window.setInterval(next, 3000);
+		</script>
+	</head>
+	<body>
+
+	<table align="center" cellpadding="10" cellspacing="0">
+		<tr>
+		<td><img id="images" src="food (1).jpg" width="500" height="250"></td>
+		</tr>
+		
+		
+		</table>
+
+
+	</body>
+</html>

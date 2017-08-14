@@ -1,0 +1,17 @@
+<script type="text/javascript">	
+	function request(){
+		//var obj = new XMLHttpRequest();
+		var obj = "Wrong Name Input";
+		//obj.open("GET", "response.php?key="+value, false);
+		//obj.send();
+		/*obj.onreadystatechange = function(){
+			if(obj.readyState==4){*/
+				var span = document.getElementById("msg");
+				span.innerHTML =obj ;
+			/*}
+		}*/
+	}
+</script>
+<input type="submit" value="submit" onclick= "request()" />
+
+<span id="msg"></span>
